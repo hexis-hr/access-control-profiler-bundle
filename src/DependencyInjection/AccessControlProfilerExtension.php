@@ -15,7 +15,7 @@ class AccessControlProfilerExtension extends Extension
         return 'access_control_profiler';
     }
 
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         //this is required because of Sulu CMS :(
         if (!class_exists('Symfony\Component\HttpKernel\Profiler\Profiler')) return;
